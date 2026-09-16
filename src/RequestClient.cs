@@ -147,6 +147,7 @@ public sealed class RequestClient(RequestClientOptions? options) : IRequestClien
 		request.DisableIPv6 ??= Options.DisableIPv6;
 		request.ForceHttp1 ??= Options.ForceHttp1;
 		request.DisableHttp3 ??= Options.DisableHttp3;
+		request.DisableSessionTickets ??= Options.DisableSessionTickets;
 		request.WithProtocolRacing ??= Options.WithProtocolRacing;
 		request.WithDebug ??= Options.WithDebug;
 		request.CatchPanics ??= Options.CatchPanics;

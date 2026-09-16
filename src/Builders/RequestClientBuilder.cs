@@ -135,6 +135,15 @@ public class RequestClientBuilder
 	}
 
 	/// <summary>
+	/// Disables TLS session ticket caching and resumption.
+	/// </summary>
+	public RequestClientBuilder WithDisableSessionTickets(bool disable = true)
+	{
+		Options.DisableSessionTickets = disable;
+		return this;
+	}
+
+	/// <summary>
 	/// Forces HTTP/1.1 protocol.
 	/// </summary>
 	public RequestClientBuilder WithForceHttp1(bool force = true)

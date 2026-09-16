@@ -34,6 +34,12 @@ public sealed class BrowserType(string value)
 	public static readonly BrowserType Chrome144Psk = new("chrome_144_PSK");
 	public static readonly BrowserType Chrome146 = new("chrome_146");
 	public static readonly BrowserType Chrome146Psk = new("chrome_146_PSK");
+	public static readonly BrowserType Chrome150 = new("chrome_150");
+	public static readonly BrowserType Chrome150Psk = new("chrome_150_PSK");
+	public static readonly BrowserType Chrome152 = new("chrome_152");
+	public static readonly BrowserType Chrome152Psk = new("chrome_152_PSK");
+	public static readonly BrowserType Brave146 = new("brave_146");
+	public static readonly BrowserType Brave146Psk = new("brave_146_PSK");
 	public static readonly BrowserType Safari1561 = new("safari_15_6_1");
 	public static readonly BrowserType Safari160 = new("safari_16_0");
 	public static readonly BrowserType SafariIpad156 = new("safari_ipad_15_6");
@@ -59,6 +65,7 @@ public sealed class BrowserType(string value)
 	public static readonly BrowserType Firefox146Psk = new("firefox_146_PSK");
 	public static readonly BrowserType Firefox147 = new("firefox_147");
 	public static readonly BrowserType Firefox147Psk = new("firefox_147_PSK");
+	public static readonly BrowserType Firefox148 = new("firefox_148");
 	public static readonly BrowserType Opera89 = new("opera_89");
 	public static readonly BrowserType Opera90 = new("opera_90");
 	public static readonly BrowserType Opera91 = new("opera_91");

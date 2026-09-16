@@ -181,6 +181,13 @@ public class Request
 	public bool? DisableHttp3 { get; set; }
 
 	/// <summary>
+	/// Disables TLS session ticket caching and resumption.
+	/// </summary>
+	[JsonPropertyName("disableSessionTickets")]
+	[JsonConverter(typeof(NullableBoolToFalseConverter))]
+	public bool? DisableSessionTickets { get; set; }
+
+	/// <summary>
 	/// Enables protocol racing.
 	/// </summary>
 	[JsonPropertyName("withProtocolRacing")]
@@ -298,6 +305,7 @@ public class Request
 			DisableIPv6 = DisableIPv6,
 			ForceHttp1 = ForceHttp1,
 			DisableHttp3 = DisableHttp3,
+			DisableSessionTickets = DisableSessionTickets,
 			WithProtocolRacing = WithProtocolRacing,
 			TimeoutMilliseconds = TimeoutMilliseconds,
 			TimeoutSeconds = TimeoutSeconds,

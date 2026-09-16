@@ -32,7 +32,7 @@ using var context = new NativeClientContext("path/to/native-library");
 ## Quick Start
 
 ```csharp
-using var context = new NativeClientContext("tls-client-windows-64-1.14.0.dll");
+using var context = new NativeClientContext("tls-client-windows-64-<version>.dll");
 
 using var client = new RequestClientBuilder()
     .WithBrowserType(BrowserType.Chrome133)
@@ -104,18 +104,6 @@ var request = new RequestBuilder()
 - `WithHeader()` / `WithHeaders()` - headers
 - `WithCookie()` / `WithCookies()` - cookies
 - ...
-
-## Features
-
-- **HTTP/1.1, HTTP/2, HTTP/3** - Full protocol support with automatic negotiation
-- **Protocol Racing** - Chrome-like "Happy Eyeballs" for HTTP/2 vs HTTP/3
-- **TLS Fingerprinting** - Mimic Chrome, Firefox, Safari, and other browsers
-- **HTTP/3 Fingerprinting** - Accurate QUIC/HTTP/3 fingerprints matching real browsers
-- **Custom Header Ordering** - Control the order of HTTP headers
-- **Proxy Support** - HTTP and SOCKS5 proxies
-- **Cookie Jar Management** - Built-in cookie handling
-- **Certificate Pinning** - Enhanced security with custom certificate validation
-...
 
 ## Examples
 

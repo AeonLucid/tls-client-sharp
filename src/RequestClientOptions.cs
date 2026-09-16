@@ -116,6 +116,11 @@ public sealed class RequestClientOptions
 	public bool DisableHttp3 { get; set; }
 
 	/// <summary>
+	/// Disables TLS session ticket caching and resumption.
+	/// </summary>
+	public bool DisableSessionTickets { get; set; }
+
+	/// <summary>
 	/// Enables protocol racing.
 	/// </summary>
 	public bool WithProtocolRacing { get; set; }
@@ -199,6 +204,7 @@ public sealed class RequestClientOptions
 			DisableIPv6 = DisableIPv6,
 			ForceHttp1 = ForceHttp1,
 			DisableHttp3 = DisableHttp3,
+			DisableSessionTickets = DisableSessionTickets,
 			WithProtocolRacing = WithProtocolRacing,
 			InsecureSkipVerify = InsecureSkipVerify,
 			WithRandomTlsExtensionOrder = WithRandomTlsExtensionOrder,

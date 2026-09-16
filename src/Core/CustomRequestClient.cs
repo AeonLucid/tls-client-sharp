@@ -61,6 +61,13 @@ public class CustomRequestClient
 	public string Ja3Fingerprint { get; set; } = string.Empty;
 
 	/// <summary>
+	/// Hex encoded trust_anchors extension data, required when JA3 includes extension 51764.
+	/// Use "0000" for an empty anchor list.
+	/// </summary>
+	[JsonPropertyName("trustAnchorsPayload")]
+	public string TrustAnchorsPayload { get; set; } = string.Empty;
+
+	/// <summary>
 	/// Key share curves.
 	/// </summary>
 	[JsonPropertyName("keyShareCurves")]
@@ -169,6 +176,7 @@ public class CustomRequestClient
 		HeaderPriority = HeaderPriority,
 		CertificateCompressionAlgorithms = [.. CertificateCompressionAlgorithms],
 		Ja3Fingerprint = Ja3Fingerprint,
+		TrustAnchorsPayload = TrustAnchorsPayload,
 		KeyShareCurves = [.. KeyShareCurves],
 		AlpnProtocols = [.. AlpnProtocols],
 		AlpsProtocols = [.. AlpsProtocols],
